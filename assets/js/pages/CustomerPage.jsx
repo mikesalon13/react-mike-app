@@ -58,7 +58,7 @@ const CustomerPage = ({match, history}) => {
 
     // Gestion de la soumission du formulaire
     const handleSubmit = async (event) => {
-        event.preventDefault()
+        event.preventDefault();
         
         try {
             setErrors({});
