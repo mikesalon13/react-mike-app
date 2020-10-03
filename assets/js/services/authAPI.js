@@ -6,7 +6,6 @@ import jwtDecode from "jwt-decode"
  *
  * Déconnexion ( suppression du localStorage et sur Axios)
  * 
- * @return  {[type]}  [return description]
  */
 function logout(){
     window.localStorage.removeItem("authToken")
@@ -19,7 +18,6 @@ function logout(){
  *
  * @param   {object}  credentials  [credentials description]
  *
- * @return  {[type]}               [return description]
  */
 function authenticate(credentials){
     axios
@@ -37,8 +35,6 @@ function authenticate(credentials){
  * Positionne le token JWT sur Axios
  *
  * @param   {string}  token  Le token JWT
- *
- * @return  {[type]}         [return description]
  */
 function setAxiosToken(token){
     // On prévient Axios qu'on a maintenant un header par défaut sur toutes nos futures requêtes HTTP
@@ -64,14 +60,12 @@ function setup(){
 /**
  * Permet de savoir si on est authentifié ou non
  *
- * @return  {Boolean}  [return description]
  */
 function isAuthenticated(){
     const token = window.localStorage.getItem("authToken")
+    
     if (token) {
-        const {
-            exp: expiration
-        } = jwtDecode(token)
+        const {exp: expiration} = jwtDecode(token)
         if (expiration * 1000 > new Date().getTime()) {
             return true
         }
