@@ -1,5 +1,6 @@
 import axios from "axios"
 import jwtDecode from "jwt-decode"
+import { LOGIN_API } from "../config"
 
 /**
  * [logout description]
@@ -21,7 +22,7 @@ function logout(){
  */
 function authenticate(credentials){
     axios
-        .post("http://localhost:8000/api/login_check", credentials)
+        .post(LOGIN_API, credentials)
         .then(response => response.data.token)
         .then(token => {
             //je stock le token dans mon localStorage
