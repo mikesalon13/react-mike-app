@@ -1,4 +1,7 @@
 {
+    "engines": {
+        "node": "12.x"
+    },
     "devDependencies": {
         "@babel/preset-react": "^7.10.4",
         "@symfony/webpack-encore": "^0.30.0",
