@@ -12,7 +12,7 @@ import CustomersPage from './pages/CustomersPage';
 import HomePage from './pages/HomePage';
 import InvoicePage from './pages/invoicePage';
 import InvoicesPage from './pages/InvoicesPage';
-import LoginPage from './pages/LoginPAge';
+import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import AuthAPI from "./services/authAPI";
 import { toast, ToastContainer } from "react-toastify";
