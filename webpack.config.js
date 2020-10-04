@@ -72,9 +72,9 @@ Encore
     .enableReactPreset()
     //.addEntry('admin', './assets/js/admin.js')
 
-    Encore.configureDefinePlugin(options => {
-        options["process.env"].API_URL = process.env.API_URL;
-    });
+    Encore.configureDefinePlugin(function (options) {
+            options["process.env"].API_URL = process.env.API_URL;
+        });
 ;
 
 module.exports = Encore.getWebpackConfig();
